@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import MyContext from '../contexts/MyContext';
 import withRouter from '../utils/withRouter';
 import "../styles/Login.css";
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
   static contextType = MyContext; // using this.context to access global state
@@ -54,7 +55,7 @@ class Login extends Component {
               </div>
               <button type="submit" value="LOGIN" onClick={(e) => this.btnLoginClick(e)}>Login</button>
               <div className='register'>
-                <p>Chưa có tài khoản? <a href='http://localhost:3001/signup'>Đăng ký</a></p>
+                <p>Chưa có tài khoản? <Link to='/signup'>Đăng ký</Link></p>
               </div>
             </form>
           </div>
