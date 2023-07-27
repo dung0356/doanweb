@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import "../styles/Signup.css";
+import { Link } from 'react-router-dom';
 
 class Signup extends Component {
   constructor(props) {
@@ -75,7 +76,7 @@ class Signup extends Component {
             </div>
             <button type="submit" value="SIGN-UP" onClick={(e) => this.btnSignupClick(e)}>Đăng ký</button>
             <div className='register'>
-              <p>Đã có tài khoản? <a href='http://localhost:3001/login'>Đăng nhập ở đây</a></p>
+              <p>Đã có tài khoản? <Link to='/login'>Đăng nhập ở đây</Link></p>
             </div>
           </form>
         </div>
